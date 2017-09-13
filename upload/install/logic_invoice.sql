@@ -1051,3 +1051,18 @@ CREATE TABLE IF NOT EXISTS `li_user_group` (
 INSERT INTO `li_user_group` (`user_group_id`, `name`, `permission`) VALUES
 (1, 'Top Administrator', '{"access":["accounting\\/account","accounting\\/currency","accounting\\/inventory","accounting\\/journal","accounting\\/tax_class","accounting\\/tax_rate","billing\\/customer","billing\\/invoice","billing\\/quotation","billing\\/recurring","common\\/dashboard","content\\/article","content\\/blog_category","content\\/blog_post","content\\/email_template","extension\\/module","extension\\/payment","extension\\/total","report\\/chart_of_accounts","report\\/invoice","report\\/recurring","report\\/sci","report\\/sfp","system\\/activity","system\\/error","system\\/filemanager","system\\/language","system\\/setting","system\\/status","system\\/user","system\\/user_group","module\\/contact_form","payment\\/bank_transfer","payment\\/cheque","payment\\/pp_standard","total\\/sub_total","total\\/tax","total\\/total"],"modify":["accounting\\/account","accounting\\/currency","accounting\\/inventory","accounting\\/journal","accounting\\/tax_class","accounting\\/tax_rate","billing\\/customer","billing\\/invoice","billing\\/recurring","common\\/dashboard","content\\/article","content\\/blog_category","content\\/blog_post","content\\/email_template","extension\\/module","extension\\/payment","extension\\/total","report\\/chart_of_accounts","report\\/invoice","report\\/recurring","report\\/sci","report\\/sfp","system\\/activity","system\\/error","system\\/filemanager","system\\/language","system\\/setting","system\\/status","system\\/user","system\\/user_group","module\\/contact_form","payment\\/bank_transfer","payment\\/cheque","payment\\/pp_standard","total\\/sub_total","total\\/tax","total\\/total"]}'),
 (2, 'System', '');
+
+
+-- Tables structure for table li_vendor
+
+CREATE TABLE IF NOT EXISTS `li_vendor` (
+  `vendor_id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(30) NOT NULL,
+  `address` VARCHAR(100) NULL,
+  `email` VARCHAR(96) NULL,
+  `phone` VARCHAR(15) NULL,
+  `date_added` DATETIME NULL,
+  `date_modified` DATETIME NULL,
+  PRIMARY KEY (`vendor_id`))
+ENGINE = MyISAM;
+
