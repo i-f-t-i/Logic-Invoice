@@ -54,14 +54,25 @@
             </li>
           </ul>
         </li>
-        <li><a class="parent"><i class="fa fa-usd fa-fw"></i> <span><?php echo $text_billing; ?></span></a>
+       
+           <li><a class="parent"><i class="fa fa-usd fa-fw"></i> <span><?php echo $text_billing_payables; ?></span></a>
+           <ul>
+            <li><a class="parent"><span><?php echo $text_customer; ?></span></a>
           <ul>
             <li><a href="<?php echo $customer; ?>"><span><?php echo $text_customer; ?></span></a></li>
             <li><a href="<?php echo $invoice; ?>"><span><?php echo $text_invoice; ?></span></a></li>
 			<li><a href="<?php echo $quotation; ?>"><span><?php echo $text_quotation; ?></span></a></li>
             <li><a href="<?php echo $recurring; ?>"><span><?php echo $text_recurring; ?></span></a></li>
+            </ul>
+          </li>
+            <li><a class="parent"><span><?php echo $text_vendor_class; ?></span></a>
+           <ul>
+            <li><a href="<?php echo $vendor; ?>"><span><?php echo $text_vendor; ?></span></a></li>
           </ul>
         </li>
+         </ul>
+        </li>
+
         <li><a class="parent"><i class="fa fa-newspaper-o fa-fw"></i> <span><?php echo $text_content; ?></span></a>
           <ul>
             <li><a href="<?php echo $article; ?>"><span><?php echo $text_article; ?></span></a></li>
