@@ -68,7 +68,10 @@
             <li><a class="parent"><span><?php echo $text_vendor_class; ?></span></a>
            <ul>
             <li><a href="<?php echo $vendor; ?>"><span><?php echo $text_vendor; ?></span></a></li>
+<<<<<<< HEAD
             <li><a href="<?php echo $vendor_invoice; ?>"><span><?php echo $text_vendor_invoice;  ?></span></a></li>
+=======
+>>>>>>> parent of 1360d8b... adding vendor invoices
           </ul>
         </li>
          </ul>
