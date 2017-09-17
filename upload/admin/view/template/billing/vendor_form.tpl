@@ -47,18 +47,18 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-email"><?php echo $entry_email; ?></label>
+            <label class="required col-sm-2 control-label" for="input-email"><?php echo $entry_email; ?></label>
             <div class="col-sm-10">
-              <input type="text" name="email" value="<?php echo $email; ?>" id="input-email" class="form-control" placeholder="<?php echo $entry_email; ?>" />
+              <input type="text" name="email" value="<?php echo $email; ?>" id="input-email" class="form-control" placeholder="<?php echo $entry_email; ?>" required />
               <?php if ($error_email) { ?>
               <div class="text-danger"><?php echo $error_email; ?></div>
               <?php } ?>
             </div>
           </div>
            <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-phone"><?php echo $entry_phone; ?></label>
+            <label class="required col-sm-2 control-label" for="input-phone"><?php echo $entry_phone; ?></label>
             <div class="col-sm-10">
-              <input type="text" name="phone" value="<?php echo $phone; ?>" id="input-phone" class="form-control" placeholder="<?php echo $entry_phone; ?>" />
+              <input type="text" name="phone" value="<?php echo $phone; ?>" id="input-phone" class="form-control" placeholder="<?php echo $entry_phone; ?>" required />
               <?php if ($error_phone) { ?>
               <div class="text-danger"><?php echo $error_phone; ?></div>
               <?php } ?>
