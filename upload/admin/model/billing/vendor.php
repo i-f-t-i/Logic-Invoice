@@ -37,6 +37,12 @@ class ModelBillingVendor extends Model {
         return $query->row;
     }
 
+        public function getVendorByEmail($email) {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "vendor WHERE email = '" . $email . "'");
+
+        return $query->row;
+    }
+
 
     public function getVendors($data = array()) {
       //  $sql = "SELECT *, name, date_added FROM " . DB_PREFIX . "vendor";
