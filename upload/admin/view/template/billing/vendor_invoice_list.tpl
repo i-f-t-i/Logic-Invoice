@@ -17,8 +17,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <div class="pull-right">
-      <button type="button" title="<?php echo $button_transaction; ?>" data-toggle="tooltip" class="btn btn-primary" onclick="$('#form-invoice').attr('action', '<?php echo $transaction; ?>');
-              confirm('<?php echo $text_confirm; ?>') ? $('#form-invoice').submit() : false;"><i class="fa fa-check"></i></button>
+      
       <a href="<?php echo $insert; ?>" title="<?php echo $button_add; ?>" data-toggle="tooltip" class="btn btn-success"><i class="fa fa-plus"></i></a>
       <button type="button" title="<?php echo $button_delete; ?>" data-toggle="tooltip" class="btn btn-danger" onclick="$('#form-invoice').attr('action', '<?php echo $delete; ?>');
               confirm('<?php echo $text_confirm; ?>') ? $('#form-invoice').submit() : false;"><i class="fa fa-trash"></i></button>
