@@ -292,9 +292,10 @@ class ControllerBillingVendor extends Controller {
     public function autocomplete() {
         $json = array();
 
-        if (isset($this->request->get['filter_name']) || isset($this->request->get['filter_email'])) {
+        if (isset($this->request->get['filter_name']) || isset($this->request->get['filter_email']) || isset($this->request->get['filter_address']) || isset($this->request->get['filter_phone'])) {
             if (isset($this->request->get['filter_name'])) {
                 $filter_name = $this->request->get['filter_name'];
+             
             } else {
                 $filter_name = '';
             }
@@ -305,9 +306,23 @@ class ControllerBillingVendor extends Controller {
                 $filter_email = '';
             }
 
+            if (isset($this->request->get['filter_address'])) {
+                $filter_address = $this->request->get['filter_address'];
+            } else {
+                $filter_address = '';
+            }
+
+             if (isset($this->request->get['filter_phone'])) {
+                $filter_phone = $this->request->get['filter_phone'];
+            } else {
+                $filter_phone = '';
+            }
+
             $filter_data = array(
                 'filter_name'  => $filter_name,
                 'filter_email' => $filter_email,
+                'filter_phone' => $filter_phone,
+                'filter_address' => $filter_address,
                 'start'        => 0,
                 'limit'        => $this->config->get('config_limit_admin')
             );

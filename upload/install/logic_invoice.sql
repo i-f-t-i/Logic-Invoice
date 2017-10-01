@@ -1053,7 +1053,7 @@ INSERT INTO `li_user_group` (`user_group_id`, `name`, `permission`) VALUES
 (2, 'System', '');
 
 
--- Tables structure for table li_vendor
+-- Table structure for table li_vendor
 
 CREATE TABLE IF NOT EXISTS `li_vendor` (
   `vendor_id` INT NOT NULL AUTO_INCREMENT,
@@ -1066,3 +1066,57 @@ CREATE TABLE IF NOT EXISTS `li_vendor` (
   PRIMARY KEY (`vendor_id`))
 ENGINE = MyISAM;
 
+-------Table structure for table li_vendor_invoice
+
+CREATE TABLE IF NOT EXISTS `li_vendor_invoice` (
+  `invoice_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `vendor_id` VARCHAR(50) NOT NULL,
+  `vendor_name` VARCHAR(45) NOT NULL,
+  `address` VARCHAR(100) NULL,
+  `email` VARCHAR(96) NULL,
+  `phone` VARCHAR(15) NULL,
+  `total` DECIMAL NULL,
+  `due_date` DATE NULL,
+  `payment_method` VARCHAR(20) NULL,
+  `payment_description` VARCHAR(45) NULL,
+  `currency` VARCHAR(45) NULL,
+  `currency_value` VARCHAR(45) NULL DEFAULT '1',
+  `date_issued` DATETIME NULL,
+  `date_modified` DATETIME NULL,
+  `invoice_no` VARCHAR(30) NULL,
+  `transaction` tinyint(1) NULL,
+  PRIMARY KEY (`invoice_id`))
+ENGINE = MyISAM;
+
+
+-------------Table structure for table li_vendor_item
+
+CREATE TABLE IF NOT EXISTS `li_vendor_item` (
+  `vendor_item_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `vendor_id` INT(11) NULL,
+  `inventory_id` INT(11) NULL,
+  `title` VARCHAR(255) NULL,
+  `description` TEXT NULL,
+  `tax_class_id` INT(11) NULL,
+  `quantity` INT(11) NULL,
+  `price` DECIMAL NULL,
+  `tax` DECIMAL NULL,
+  `discount` DECIMAL NULL,
+  PRIMARY KEY (`vendor_item_id`))
+ENGINE = MyISAM;
+
+
+---------------Table structure for table li_vendor_total
+
+CREATE TABLE IF NOT EXISTS `li_vendor_total` (
+  `vendor_total_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `vendor_invoice_id` INT(11) NULL,
+  `code` VARCHAR(32) NULL,
+  `title` VARCHAR(255) NULL,
+  `value` DECIMAL NULL,
+  `sort_order` INT(3) NULL,
+  PRIMARY KEY (`vendor_total_id`))
+ENGINE = MyISAM;
+
+
+-----------------------------------------------
